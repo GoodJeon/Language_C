@@ -1,4 +1,4 @@
-# C - 1일차
+# C
 
 ## 1. 기본 입출력
 * #include <stdio.h> : standard input output의 약자로 입출력에 관련된 것을 호출하는 구문
@@ -30,3 +30,37 @@ int main() {
 * `double 변수명 = 실수;`와 같은 식으로 실수형 변수 선언 가능
 * 출력할 때는 `printf("%lf\n", 변수명)`과 같은 형식으로, `%lf`가 double을 사용한 실수형 변수를 뜻함.
 * 똑같이 % 뒤에 `.숫자`를 사용해서 출력되는 소수점 자리수를 조절할 수 있음
+
+## 5. 상수
+* 변하지 않는 수, 한 번 정의하면 값을 바꿀 수 없음
+* `const int 상수명 = 정수;` 와 같은 식으로 상수 선언 가능
+
+## 6. printf
+* 디버그 콘솔(터미널)에 출력하고자 하는 것을 출력해줌
+* 연산 가능 
+* 예) `printf("%d + %d = %d\n", 30, 79, 30 * 79)`
+
+## 7. scanf
+* 키보드로 값을 입력받아서 변수에 저장
+* `&`로 값을 저장할 변수를 선택한다.
+* 예)
+  1. 정수형 한개
+  ```c
+  int input;
+  scanf_s("%d", &input);
+  printf("%d\n", input);
+  ```
+  2. 정수 여러개
+  ```c
+  int one, two, three;
+  scanf_s("%d %d %d", &one, &two, &three);
+  printf("%d %d %d", one, two, three);
+  ```
+  3. 문자열
+  ```c
+  char str[256];
+  scanf_s("%s", str, sizeof(str));
+  printf("%s\n", str);
+  ```
+* 문자열은 변수 선언 시 길이를 대괄호([])로 정할 수 있으며, `sizeof()`로 스캔 받으려는 길이를 정할 수 있음.
+
