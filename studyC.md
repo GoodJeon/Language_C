@@ -47,19 +47,19 @@ int main() {
   1. 정수형 한개
   ```c
   int input;
-  scanf_s("%d", &input);
+  scanf("%d", &input);
   printf("%d\n", input);
   ```
   2. 정수 여러개
   ```c
   int one, two, three;
-  scanf_s("%d %d %d", &one, &two, &three);
+  scanf("%d %d %d", &one, &two, &three);
   printf("%d %d %d", one, two, three);
   ```
   3. 문자열
   ```c
   char str[256];
-  scanf_s("%s", str, sizeof(str));
+  scanf("%s", str, sizeof(str));
   printf("%s\n", str);
   ```
 * 문자열은 변수 선언 시 길이를 대괄호([])로 정할 수 있으며, `sizeof()`로 스캔 받으려는 길이를 정할 수 있음.
